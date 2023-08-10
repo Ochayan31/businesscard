@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #EED891;
+}
+
+.wrapper{
+    position: relative;
+    height: 330px;
+    width: 620px;
+    perspective: 1000px;
+}
+
+.cards{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: #D48600;
+    transform-style: preserve-3d;
+    transition: all 1s ease-in-out;
+}
+
+.wrapper:hover .cards{
+    transform: rotateY(180deg);
+}
+
+.front{
+    transform: rotateY(180deg);
+}
+
+.front-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background: #D48600;
+    border-top: 2px solid #cc6600;
+    border-left: 2px solid #cc6600;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    backface-visibility: hidden;
+    position: absolute;
+}
+
+.circle,
+.square{
+    height: 110px;
+    width: 110px;
+    border: 10px solid #4d2600;
+}
+
+.circle{
+    border-radius: 50%;
+}
+
+.triangle{
+    position: relative;
+    height: 0;
+    width: 0;
+    border-right: 60px solid transparent;
+    border-left: 60px solid transparent;
+    border-bottom: 110px solid #4d2600;
+    margin-right: 16px;
+}
+
+.triangle::before{
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    left: -40px;
+    top: 20px;
+    border-right: 40px solid transparent;
+    border-left: 40px solid transparent;
+    border-bottom: 80px solid #D48600;
+}
+
+.gf{
+    height: 150px;
+}
+
+.back-card{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    font-size: 24px;
+    justify-content: space-around;
+    margin-top: 80px;
+    margin-left: 70px;
+}
+
+.text{
+    font-size: 21px;
+    margin-top: 80px;
+    margin-right: 70px;
+    color: #4d2600;
+}
+
+.insta{
+    padding-top: 10px;
+}
+
+.call{
+    padding-top: 10px;
+}
+
+.mail{
+    padding-top: 10px;
+}
